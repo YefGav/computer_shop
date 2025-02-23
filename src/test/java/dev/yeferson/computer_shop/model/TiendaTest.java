@@ -22,7 +22,7 @@ public class TiendaTest {
 
     void testConstructorYGetters() {
 
-        assertThat(tienda.getNombre(), is("Tech Store"));
+        assertThat(tienda.getNombreTienda(), is("Tech Store"));
         assertThat(tienda.getPropietario(), is("Yeferson Gaviria"));
         assertThat(tienda.getIdentificacionTributaria(), is("12345-67890"));
     }
