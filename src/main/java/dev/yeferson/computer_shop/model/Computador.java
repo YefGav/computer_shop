@@ -42,42 +42,45 @@ public class Computador {
         return precio;
     }
 
-@Override
-public String toString() {
-    return "Computador [" +
-            "id=" + id +
-            ", marca=" + marca + 
-            ", memoria=" + memoria + " GB" +
-            ", procesador=" + procesador + 
-            ", sistemaOperativo=" + sistemaOperativo + 
-            ", precio=" + precio +
-            "]";
-    
+    @Override
+    public String toString() {
+        return "Computador [" +
+                "id=" + id +
+                ", marca=" + marca +
+                ", memoria=" + memoria + " GB" +
+                ", procesador=" + procesador +
+                ", sistemaOperativo=" + sistemaOperativo +
+                ", precio=" + precio +
+                "]";
+
     }
 
-public void setId(int id) {
-    this.id = id;
-}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-public void setMarca(String marca) {
-    this.marca = marca;
-}
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
 
-public void setMemoria(int memoria) {
-    this.memoria = memoria;
-}
+    public void setMemoria(int memoria) {
+        this.memoria = memoria;
+    }
 
-public void setProcesador(String procesador) {
-    this.procesador = procesador;
-}
+    public void setProcesador(String procesador) {
+        this.procesador = procesador;
+    }
 
-public void setSistemaOperativo(String sistemaOperativo) {
-    this.sistemaOperativo = sistemaOperativo;
-}
+    public void setSistemaOperativo(String sistemaOperativo) {
+        this.sistemaOperativo = sistemaOperativo;
+    }
 
-public void setPrecio(double precio) {
-    this.precio = precio;
-}
+    public void setPrecio(double precio) {
+        if (precio < 0) {
+            throw new IllegalArgumentException("El precio no puede ser negativo");
 
-    
+        }
+        this.precio = precio;
+    }
+
 }
