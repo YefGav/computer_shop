@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / dependency libraries
+target/
+*.class
+
+# Maven specific files
+log/
+!src/main/resources/log/
+*.log
+!src/main/resources/log/*.log
+
+# Directories
+build/
+out/
+
+# Eclipse specific files
+.project
+.classpath
+.settings/
+.apt_generated/
+.factorypath
+
+# IntelliJ IDEA specific files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# NetBeans specific files
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# VS Code specific files
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Linux
+*~
