@@ -24,4 +24,14 @@ public class ComputerTest {
 
     }
 
+    @Test
+    @DisplayName("Test for the toString method")
+
+    void testToString() {
+
+        Computer computer = new Computer(1, "Dell", 16, "Intel i7", "Windows 11", 1200.0);
+        String expected = "Computer{id=1, marca='Dell', memoria=16 GB, procesador='Intel i7', sistemaOperativo='Windows 11', precio=1200.0}";
+        assertThat(computer.toString(), is(expected));
+    }
+
 }
