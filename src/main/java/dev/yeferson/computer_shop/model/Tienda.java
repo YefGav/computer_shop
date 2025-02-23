@@ -2,6 +2,7 @@ package dev.yeferson.computer_shop.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Tienda {
 
@@ -37,6 +38,13 @@ public class Tienda {
 
     public void eliminarComputador(int id) {
         listaComputadores.removeIf(computador -> computador.getId() == id);
+    }
+
+    public List<Computador> buscarComputadorPorMarca (String marca) {
+       
+        return listaComputadores.stream()
+        .filter(c -> c.getMarca().equalsIgnoreCase(marca))
+        .collect(Collectors.toList());
     }
 
     

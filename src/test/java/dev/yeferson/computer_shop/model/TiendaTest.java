@@ -72,12 +72,12 @@ public class TiendaTest {
         tienda.agregarComputador(computador2);
         tienda.agregarComputador(computador3);
 
-        List<Computador> computadoresDell = tienda.buscarComputadorPorMarca("Dell");
+        List<Computador> resultados = tienda.buscarComputadorPorMarca("Dell");
 
-        assertThat(tienda.buscarComputadorPorMarca("Dell"), hasSize(2));
-        assertThat(tienda.buscarComputadorPorMarca("Dell"), contains(computador1, computador3));
+        assertThat(resultados, hasSize(2));
+        assertThat(resultados, containsInAnyOrder(computador1, computador3));
 
-        List <Computador> computadoresHP = tienda.buscarComputadorPorMarca("Apple");
+        List <Computador> sinResultados = tienda.buscarComputadorPorMarca("Apple");
         assertThat(sinResultados, is(empty()));
     }
 }
