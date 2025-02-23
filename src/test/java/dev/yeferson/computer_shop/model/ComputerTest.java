@@ -34,4 +34,24 @@ public class ComputerTest {
         assertThat(computer.toString(), is(expected));
     }
 
+    @Test
+    @DisplayName("Test for setters methods")
+
+    void testSetters() {
+        
+        Computer computer = new Computer(1, "Dell", 16, "Intel i7", "Windows 11", 1200.0);
+        computer.setId(2);
+        computer.setMarca("HP");
+        computer.setMemoria(8);
+        computer.setProcesador("Intel i5");
+        computer.setSistemaOperativo("Windows 10");
+        computer.setPrecio(800.0);
+
+        assertThat(computer.getId(), equalTo(2));
+        assertThat(computer.getMarca(), equalTo("HP"));
+        assertThat(computer.getMemoria(), equalTo(8));
+        assertThat(computer.getProcesador(), equalTo("Intel i5"));
+        assertThat(computer.getSistemaOperativo(), equalTo("Windows 10"));
+        assertThat(computer.getPrecio(), equalTo(800.0));
+    }
 }
