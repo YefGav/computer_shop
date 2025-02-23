@@ -14,5 +14,9 @@ public class Controller {
     public void agregarComputador (Computador computador) {
         tienda.agregarComputador(computador);
     }
+
+    public void eliminarComputador (int id) {
+        tienda.eliminarComputador(id);
+    }
     
 }
