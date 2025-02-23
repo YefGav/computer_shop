@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Tienda {
+public class Tienda implements GestionTienda {
 
     private String NombreTienda;
     private String Propietario;
