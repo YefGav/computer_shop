@@ -1,6 +1,6 @@
 package dev.yeferson.computer_shop.model;
 
-public class Computer {
+public class Computador {
 
     private int id;
     private String marca;
@@ -9,7 +9,7 @@ public class Computer {
     private String sistemaOperativo;
     private double precio;
 
-    public Computer(int id, String marca, int memoria, String procesador, String sistemaOperativo, double precio) {
+    public Computador(int id, String marca, int memoria, String procesador, String sistemaOperativo, double precio) {
         this.id = id;
         this.marca = marca;
         this.memoria = memoria;
