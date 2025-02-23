@@ -41,7 +41,17 @@ public class Computer {
     public double getPrecio() {
         return precio;
     }
-    
 
+@Override
+public String toString() {
+    return "Computador [" +
+            "id=" + id +
+            ", marca=" + marca + 
+            ", memoria=" + memoria + " GB" +
+            ", procesador=" + procesador + 
+            ", sistemaOperativo=" + sistemaOperativo + 
+            ", precio=" + precio +
+            "]";
     
+    }
 }
