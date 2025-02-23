@@ -1,7 +1,5 @@
 package dev.yeferson.computer_shop.model;
 
-import dev.yeferson.computer_shop.model.Computador;
-
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.DisplayName;
@@ -60,9 +58,9 @@ public class ComputadorTest {
     @Test
     @DisplayName("Test for negative price")
 
-    void testPrecioNegativo(){
+    void testPrecioNegativo() {
 
-        Computador computador = new Computador (1, "Dell", 16, "Intel i7", "Windows 11", -1200.0);
+        Computador computador = new Computador(1, "Dell", 16, "Intel i7", "Windows 11", -1200.0);
         assertThrows(IllegalArgumentException.class, () -> computador.setPrecio(-100.0));
     }
 }
