@@ -11,5 +11,8 @@ public class Controller {
         this.tienda = tienda;
     }
 
+    public void agregarComputador (Computador computador) {
+        tienda.agregarComputador(computador);
+    }
     
 }
