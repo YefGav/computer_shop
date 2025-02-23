@@ -3,6 +3,8 @@ package dev.yeferson.computer_shop.model;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
+import java.util.List;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -55,5 +57,27 @@ public class TiendaTest {
         tienda.agregarComputador(computador);
         tienda.eliminarComputador(1);
         assertThat(tienda.ListarComputadores(), empty());
+    }
+
+    @Test
+    @DisplayName("Test for search computers by brand")
+
+    void testBuscarComputadorPorMarca() {
+
+        Computador computador1 = new Computador(1, "Dell", 16, "Intel i7", "Windows 11", 1200.0);
+        Computador computador2 = new Computador(2, "HP", 8, "Intel i5", "Windows 10", 800.0);
+        Computador computador3 = new Computador(3, "Dell", 16, "Intel i7", "Windows 11", 1200.0);
+       
+        tienda.agregarComputador(computador1);
+        tienda.agregarComputador(computador2);
+        tienda.agregarComputador(computador3);
+
+        List<Computador> computadoresDell = tienda.buscarComputadorPorMarca("Dell");
+
+        assertThat(tienda.buscarComputadorPorMarca("Dell"), hasSize(2));
+        assertThat(tienda.buscarComputadorPorMarca("Dell"), contains(computador1, computador3));
+
+        List <Computador> computadoresHP = tienda.buscarComputadorPorMarca("Apple");
+        assertThat(sinResultados, is(empty()));
     }
 }
