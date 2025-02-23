@@ -31,6 +31,10 @@ public class Tienda {
         return new ArrayList<>(listaComputadores);
     }
 
+    public void agregarComputador(Computador computador) {
+        listaComputadores.add(computador);
+    }
+
     
 }
 
