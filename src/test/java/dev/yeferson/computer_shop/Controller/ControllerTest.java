@@ -51,4 +51,23 @@ public class ControllerTest {
         List<Computador> listaComputadores = tienda.ListarComputadores();
         assertThat(listaComputadores, not(hasItem(computador)));
     }
+
+    @Test
+    @DisplayName("Test to search a computer by brand")
+
+    void testBuscarComputadorPorMarca () {
+
+        Tienda tienda = new Tienda("Tech Store", "Yeferson Gaviria","12345-67890");
+        Controller controller = new Controller(tienda);
+        Computador computador1 = new Computador(1, "Dell", 16, "Intel i7", "Windows 11", 1200.0);
+        Computador computador2 = new Computador(2, "HP", 8, "Intel i5", "Windows 10", 800.0);
+        Computador computador3 = new Computador(3, "Dell", 16, "Intel i7", "Windows 11", 1200.0);
+        
+        controller.agregarComputador(computador1);
+        controller.agregarComputador(computador2);
+        controller.agregarComputador(computador3);
+        List<Computador> listaComputadores = controller.buscarComputadorPorMarca("Dell");
+        assertThat(listaComputadores, hasSize(2));
+        assertThat(listaComputadores, contains(computador1, computador3));
+    }
 }
