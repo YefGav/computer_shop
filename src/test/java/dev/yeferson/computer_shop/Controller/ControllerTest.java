@@ -1,10 +1,12 @@
 package dev.yeferson.computer_shop.Controller;
 
-import static org.hamcrest.Matchers.notNullValue;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import dev.yeferson.computer_shop.model.Tienda;
 
 public class ControllerTest {
 
