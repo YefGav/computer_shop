@@ -26,4 +26,12 @@ public class TiendaTest {
         assertThat(tienda.getPropietario(), is("Yeferson Gaviria"));
         assertThat(tienda.getIdentificacionTributaria(), is("12345-67890"));
     }
+
+    @Test
+    @DisplayName("Test when the list of computers is empty")
+
+    void testListaComputadoresVacia() {
+
+        assertThat(tienda.getListaComputadores(), empty());
+    }
 }
