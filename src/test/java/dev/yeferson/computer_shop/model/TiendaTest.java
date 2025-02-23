@@ -32,6 +32,6 @@ public class TiendaTest {
 
     void testListaComputadoresVacia() {
 
-        assertThat(tienda.getListaComputadores(), empty());
+        assertThat(tienda.ListarComputadores(), empty());
     }
 }
