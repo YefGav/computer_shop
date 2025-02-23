@@ -34,4 +34,15 @@ public class TiendaTest {
 
         assertThat(tienda.ListarComputadores(), empty());
     }
+
+    @Test
+    @DisplayName("Test for adding computers to the list")
+
+    void testAgregarComputador() {
+
+        Computador computador = new Computador(1, "Dell", 16, "Intel i7", "Windows 11", 1200.0);
+        tienda.agregarComputador(computador);
+        assertThat(tienda.ListarComputadores(), hasSize(1));
+        assertThat(tienda.ListarComputadores(), contains(computador));
+    }
 }
