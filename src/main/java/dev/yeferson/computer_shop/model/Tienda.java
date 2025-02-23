@@ -35,6 +35,10 @@ public class Tienda {
         listaComputadores.add(computador);
     }
 
+    public void eliminarComputador(int id) {
+        listaComputadores.removeIf(computador -> computador.getId() == id);
+    }
+
     
 }
 

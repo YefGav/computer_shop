@@ -45,4 +45,15 @@ public class TiendaTest {
         assertThat(tienda.ListarComputadores(), hasSize(1));
         assertThat(tienda.ListarComputadores(), contains(computador));
     }
+
+    @Test
+    @DisplayName("Test for delete computers from the list")
+
+    void testEliminarComputador() {
+
+        Computador computador = new Computador(1, "Dell", 16, "Intel i7", "Windows 11", 1200.0);
+        tienda.agregarComputador(computador);
+        tienda.eliminarComputador(1);
+        assertThat(tienda.ListarComputadores(), empty());
+    }
 }
